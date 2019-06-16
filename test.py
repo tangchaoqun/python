@@ -1,4 +1,11 @@
-name = input("Dimmi tutto:")
+# Cancella tutto per favore!
+rain = input("Dimmi tutto:")
 
-print('Sei',name)
+f=int(rain)*9/5+20
+print('Sei',int(f))
+
+
+
+
+
 
