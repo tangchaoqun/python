@@ -1,12 +1,19 @@
-# Read CSV
+import os # Operating System
+
 products=[]
-with open ('products.csv','r',encoding='utf-8') as f:
-	for line in f:
-		if '商品,价格' in line:
-			continue # Salta
-		name,price=line.strip().split(',')
-		products.append([name,price])
-print(products)
+if os.path.isfile("products.csv"):
+	print('Come On, Baby!')
+	# Read CSV
+	with open ('products.csv','r',encoding='utf-8') as f:
+		for line in f:
+			if '商品,价格' in line:
+				continue # Salta
+			name,price=line.strip().split(',')
+			products.append([name,price])
+	print(products)
+
+else:
+	print("Non Capisco!")
 
 # Input
 while True:
